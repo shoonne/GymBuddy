@@ -1,0 +1,84 @@
+/* Class = "UILabel"; text = "Label"; ObjectID = "1DL-Ty-WQt"; */
+"1DL-Ty-WQt.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "5U2-yL-2IW"; */
+"5U2-yL-2IW.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Scanning movement..."; ObjectID = "6ud-xc-uNe"; */
+"6ud-xc-uNe.text" = "Scannar rörelser";
+
+/* Class = "UILabel"; text = "Workout description"; ObjectID = "8Sg-Ik-OK2"; */
+"8Sg-Ik-OK2.text" = "Träningsbeskrivning";
+
+/* Class = "UITextField"; placeholder = "Planet Fitness "; ObjectID = "9gD-QP-pWc"; */
+"9gD-QP-pWc.placeholder" = "Planet Fitness ";
+
+/* Class = "UIButton"; normalTitle = "CLOSE"; ObjectID = "aaY-5o-DXQ"; */
+"aaY-5o-DXQ.normalTitle" = "STÄNG";
+
+/* Class = "UIButton"; normalTitle = "LOG IN"; ObjectID = "BnT-Y8-B1P"; */
+"BnT-Y8-B1P.normalTitle" = "LOGGA IN";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "cqG-Yc-il2"; */
+"cqG-Yc-il2.title" = "Avbryt";
+
+/* Class = "UILabel"; text = "Subsection title"; ObjectID = "DSL-H6-MqB"; */
+"DSL-H6-MqB.text" = "Subsection title";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "Dv1-Sa-CMB"; */
+"Dv1-Sa-CMB.normalTitle" = "LOGGA IN";
+
+/* Class = "UILabel"; text = "TAP HERE TO ADD PHOTO"; ObjectID = "G38-UN-Rf1"; */
+"G38-UN-Rf1.text" = "TRYCK FÖR ATT LÄGGA TILL FOTO";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "GjM-CK-WWr"; */
+"GjM-CK-WWr.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Hzd-EC-42A"; */
+"Hzd-EC-42A.placeholder" = "Lösenord";
+
+/* Class = "UIButton"; normalTitle = "EXERCISE RECOGNIZER"; ObjectID = "jeZ-E5-9vK"; */
+"jeZ-E5-9vK.normalTitle" = "ÖVNINGSSCANNER";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jLP-27-iBp"; */
+"jLP-27-iBp.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Exercises"; ObjectID = "LcA-FI-bKD"; */
+"LcA-FI-bKD.title" = "Övningar";
+
+/* Class = "UIButton"; normalTitle = "SIGN UP"; ObjectID = "Ld1-bD-JhP"; */
+"Ld1-bD-JhP.normalTitle" = "REGISTRERA";
+
+/* Class = "UITextField"; placeholder = "Arms, Legs, Upper body"; ObjectID = "mIq-Gg-EOo"; */
+"mIq-Gg-EOo.placeholder" = "Arms, Legs, Upper body";
+
+/* Class = "UITabBarItem"; title = "MY WORKOUT"; ObjectID = "ODW-oh-hQS"; */
+"ODW-oh-hQS.title" = "MIN TRÄNING";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "ofz-NC-hWT"; */
+"ofz-NC-hWT.title" = "Avbryt";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "PvL-ND-8ua"; */
+"PvL-ND-8ua.placeholder" = "E-post";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Qvo-gS-q53"; */
+"Qvo-gS-q53.text" = "Label";
+
+/* Class = "UILabel"; text = "Place"; ObjectID = "t2s-4p-mhH"; */
+"t2s-4p-mhH.text" = "Plats";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "ua9-Kx-e20"; */
+"ua9-Kx-e20.placeholder" = "Namn";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "UhB-iX-cpZ"; */
+"UhB-iX-cpZ.placeholder" = "Lösenord";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uvr-zn-pju"; */
+"uvr-zn-pju.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Squats, Jumping Jacks, Push Ups"; ObjectID = "UYI-B9-5pA"; */
+"UYI-B9-5pA.placeholder" = "Squats, Jumping Jacks, Push Ups";
+
+/* Class = "UILabel"; text = "Muscle group"; ObjectID = "ZCZ-OY-MVV"; */
+"ZCZ-OY-MVV.text" = "Muskelgrupp";
+

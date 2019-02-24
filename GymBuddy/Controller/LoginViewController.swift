@@ -16,26 +16,27 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:1.00, blue:1.00, alpha:1.0)
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.64, blue:1.00, alpha:1.0)
         navigationController?.navigationBar.tintColor = .white
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.title = "Log In"
-//        emailTextField.becomeFirstResponder()
+        self.title = NSLocalizedString("Log In", comment: "logga in")
     }
     
     @IBAction func login(sender: UIButton) {
         // Validate the input
         
+        let alertTitle = NSLocalizedString("Login Error", comment: "Login Error")
+        let alertMessage = NSLocalizedString("Both fields must not be blank", comment: "alertMessage")
+        let okMessage = NSLocalizedString("OK", comment: "OK")
         guard let emailAdress = emailTextField.text, emailAdress != "",
             let password = passwordTextField.text, password != "" else {
-                let alertController = UIAlertController(title: "Login Error", message: "Both fields must not be blank", preferredStyle: .alert)
-                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: okMessage, style: .cancel, handler: nil)
                 
                 alertController.addAction(okayAction)
                 present(alertController, animated: true, completion: nil)
@@ -46,7 +47,8 @@ class LoginViewController: UIViewController {
         // Perform login by calling Firebase APIs
         Auth.auth().signIn(withEmail: emailAdress, password: password, completion: {(user, error) in
             if let error = error {
-                let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                let loginError = NSLocalizedString("Login Error", comment: "Login Error 2")
+                let alertController = UIAlertController(title: loginError, message: error.localizedDescription, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 
                 alertController.addAction(okayAction)

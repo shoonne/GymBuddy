@@ -14,7 +14,6 @@
 		2558E03F21C86C3F00338D28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2558E03E21C86C3F00338D28 /* ViewController.swift */; };
 		2558E04221C86C3F00338D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2558E04021C86C3F00338D28 /* Main.storyboard */; };
 		2558E04521C86C3F00338D28 /* GymBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2558E04321C86C3F00338D28 /* GymBuddy.xcdatamodeld */; };
-		2558E04721C86C4000338D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2558E04621C86C4000338D28 /* Assets.xcassets */; };
 		2558E04A21C86C4000338D28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2558E04821C86C4000338D28 /* LaunchScreen.storyboard */; };
 		2558E05221C8937F00338D28 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2558E05121C8937F00338D28 /* WorkoutTableViewController.swift */; };
 		2558E05421C896F100338D28 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2558E05321C896F100338D28 /* WorkoutTableViewCell.swift */; };
@@ -27,10 +26,24 @@
 		2558E06921D90A5400338D28 /* WorkoutDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2558E06821D90A5400338D28 /* WorkoutDetailIconTextCell.swift */; };
 		2558E06B21D9178F00338D28 /* WorkoutDetailSeperatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2558E06A21D9178F00338D28 /* WorkoutDetailSeperatorCell.swift */; };
 		2558E06D21D9182E00338D28 /* WorkoutDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2558E06C21D9182E00338D28 /* WorkoutDetailMapCell.swift */; };
-		2558E09321E4EC1800338D28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2558E09221E4EC1800338D28 /* GoogleService-Info.plist */; };
 		25598E3221FCD47F0046340E /* EditWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25598E3121FCD47F0046340E /* EditWorkoutViewController.swift */; };
 		258190F62203E8EB008C47FC /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258190F52203E8EB008C47FC /* CameraController.swift */; };
-		258190F92203EC20008C47FC /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 258190F82203EC20008C47FC /* Inceptionv3.mlmodel */; };
+		259DD682220CB354006509C8 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 259DD681220CB354006509C8 /* ImageClassifier.mlmodel */; };
+		259DD684220CC2A7006509C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259DD683220CC2A7006509C8 /* Assets.xcassets */; };
+		259DD686220F415F006509C8 /* ButtonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD685220F415F006509C8 /* ButtonOne.swift */; };
+		259DD688220F450C006509C8 /* ButtonTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DD687220F450C006509C8 /* ButtonTwo.swift */; };
+		25D1A1C82210839400B6D069 /* WorkoutFactsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1A1C72210839400B6D069 /* WorkoutFactsTableTableViewController.swift */; };
+		25D1A1CA221088BB00B6D069 /* WorkoutFactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1A1C9221088BB00B6D069 /* WorkoutFactsTableViewCell.swift */; };
+		25D1A1CC2210928A00B6D069 /* WorkoutFactsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1A1CB2210928A00B6D069 /* WorkoutFactsDetailViewController.swift */; };
+		25D1A1D02210981800B6D069 /* WorkoutFactsDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1A1CF2210981800B6D069 /* WorkoutFactsDetailHeader.swift */; };
+		25D1A1D222109C3100B6D069 /* WorkoutFactsDetailTextCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1A1D122109C3100B6D069 /* WorkoutFactsDetailTextCelll.swift */; };
+		25D1A1D42210F73300B6D069 /* WOFactDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1A1D32210F73300B6D069 /* WOFactDetailIconTextCell.swift */; };
+		25D1A1D72211083200B6D069 /* WOTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1A1D62211083200B6D069 /* WOTabBarController.swift */; };
+		25DAB37B2211A8B300F35C74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25DAB3792211A8B300F35C74 /* InfoPlist.strings */; };
+		25DAB37E2211A8B300F35C74 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25DAB37C2211A8B300F35C74 /* Localizable.strings */; };
+		25DAB3862213203A00F35C74 /* EditWOTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DAB3852213203A00F35C74 /* EditWOTableViewController.swift */; };
+		25DAB38A2213625500F35C74 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25DAB3892213625500F35C74 /* GoogleService-Info.plist */; };
+		25DAB38C22136E3700F35C74 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DAB38B22136E3700F35C74 /* GradientView.swift */; };
 		D9B993623B9779FB82398C7A /* Pods_GymBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413457C423E22CA2AF39C8D7 /* Pods_GymBuddy.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +57,6 @@
 		2558E03E21C86C3F00338D28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2558E04121C86C3F00338D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2558E04421C86C3F00338D28 /* GymBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GymBuddy.xcdatamodel; sourceTree = "<group>"; };
-		2558E04621C86C4000338D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2558E04921C86C4000338D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2558E04B21C86C4000338D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2558E05121C8937F00338D28 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
@@ -58,10 +70,26 @@
 		2558E06821D90A5400338D28 /* WorkoutDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailIconTextCell.swift; sourceTree = "<group>"; };
 		2558E06A21D9178F00338D28 /* WorkoutDetailSeperatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailSeperatorCell.swift; sourceTree = "<group>"; };
 		2558E06C21D9182E00338D28 /* WorkoutDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailMapCell.swift; sourceTree = "<group>"; };
-		2558E09221E4EC1800338D28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25598E3121FCD47F0046340E /* EditWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWorkoutViewController.swift; sourceTree = "<group>"; };
 		258190F52203E8EB008C47FC /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
-		258190F82203EC20008C47FC /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		259DD681220CB354006509C8 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
+		259DD683220CC2A7006509C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		259DD685220F415F006509C8 /* ButtonOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOne.swift; sourceTree = "<group>"; };
+		259DD687220F450C006509C8 /* ButtonTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTwo.swift; sourceTree = "<group>"; };
+		25D1A1C72210839400B6D069 /* WorkoutFactsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFactsTableTableViewController.swift; sourceTree = "<group>"; };
+		25D1A1C9221088BB00B6D069 /* WorkoutFactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFactsTableViewCell.swift; sourceTree = "<group>"; };
+		25D1A1CB2210928A00B6D069 /* WorkoutFactsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFactsDetailViewController.swift; sourceTree = "<group>"; };
+		25D1A1CF2210981800B6D069 /* WorkoutFactsDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFactsDetailHeader.swift; sourceTree = "<group>"; };
+		25D1A1D122109C3100B6D069 /* WorkoutFactsDetailTextCelll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFactsDetailTextCelll.swift; sourceTree = "<group>"; };
+		25D1A1D32210F73300B6D069 /* WOFactDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOFactDetailIconTextCell.swift; sourceTree = "<group>"; };
+		25D1A1D62211083200B6D069 /* WOTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOTabBarController.swift; sourceTree = "<group>"; };
+		25DAB3772211A16300F35C74 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Main.strings; sourceTree = "<group>"; };
+		25DAB3782211A16400F35C74 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		25DAB37A2211A8B300F35C74 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		25DAB37D2211A8B300F35C74 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		25DAB3852213203A00F35C74 /* EditWOTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWOTableViewController.swift; sourceTree = "<group>"; };
+		25DAB3892213625500F35C74 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		25DAB38B22136E3700F35C74 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		413457C423E22CA2AF39C8D7 /* Pods_GymBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1419A3D50AE583924CC21B7 /* Pods-GymBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymBuddy/Pods-GymBuddy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,15 +128,17 @@
 		2558E03B21C86C3F00338D28 /* GymBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				2558E05D21CADF5C00338D28 /* Model */,
 				258190F72203EB02008C47FC /* MLModel */,
 				2558E06E21E4C66800338D28 /* Controller */,
-				2558E05D21CADF5C00338D28 /* Model */,
 				2558E05E21CADF6800338D28 /* View */,
-				2558E04621C86C4000338D28 /* Assets.xcassets */,
 				2558E04B21C86C4000338D28 /* Info.plist */,
-				2558E09221E4EC1800338D28 /* GoogleService-Info.plist */,
+				25DAB37C2211A8B300F35C74 /* Localizable.strings */,
+				25DAB3792211A8B300F35C74 /* InfoPlist.strings */,
 				2558E03C21C86C3F00338D28 /* AppDelegate.swift */,
 				2558E03E21C86C3F00338D28 /* ViewController.swift */,
+				25DAB3892213625500F35C74 /* GoogleService-Info.plist */,
+				259DD683220CC2A7006509C8 /* Assets.xcassets */,
 			);
 			path = GymBuddy;
 			sourceTree = "<group>";
@@ -129,10 +159,15 @@
 				2558E04821C86C4000338D28 /* LaunchScreen.storyboard */,
 				2558E05321C896F100338D28 /* WorkoutTableViewCell.swift */,
 				2558E05921CAB29200338D28 /* RoundedTextField.swift */,
+				25D1A1D52210FD1500B6D069 /* WorkoutFacts */,
 				2558E06621D9034900338D28 /* WorkoutDetailViewHeader.swift */,
 				2558E06821D90A5400338D28 /* WorkoutDetailIconTextCell.swift */,
 				2558E06A21D9178F00338D28 /* WorkoutDetailSeperatorCell.swift */,
 				2558E06C21D9182E00338D28 /* WorkoutDetailMapCell.swift */,
+				259DD685220F415F006509C8 /* ButtonOne.swift */,
+				259DD687220F450C006509C8 /* ButtonTwo.swift */,
+				25D1A1D62211083200B6D069 /* WOTabBarController.swift */,
+				25DAB38B22136E3700F35C74 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +192,9 @@
 				2513572721EB995200A10F8F /* SignUpViewController.swift */,
 				25598E3121FCD47F0046340E /* EditWorkoutViewController.swift */,
 				258190F52203E8EB008C47FC /* CameraController.swift */,
+				25D1A1C72210839400B6D069 /* WorkoutFactsTableTableViewController.swift */,
+				25D1A1CB2210928A00B6D069 /* WorkoutFactsDetailViewController.swift */,
+				25DAB3852213203A00F35C74 /* EditWOTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,9 +202,20 @@
 		258190F72203EB02008C47FC /* MLModel */ = {
 			isa = PBXGroup;
 			children = (
-				258190F82203EC20008C47FC /* Inceptionv3.mlmodel */,
+				259DD681220CB354006509C8 /* ImageClassifier.mlmodel */,
 			);
 			path = MLModel;
+			sourceTree = "<group>";
+		};
+		25D1A1D52210FD1500B6D069 /* WorkoutFacts */ = {
+			isa = PBXGroup;
+			children = (
+				25D1A1C9221088BB00B6D069 /* WorkoutFactsTableViewCell.swift */,
+				25D1A1D122109C3100B6D069 /* WorkoutFactsDetailTextCelll.swift */,
+				25D1A1CF2210981800B6D069 /* WorkoutFactsDetailHeader.swift */,
+				25D1A1D32210F73300B6D069 /* WOFactDetailIconTextCell.swift */,
+			);
+			path = WorkoutFacts;
 			sourceTree = "<group>";
 		};
 		EEA411191BA28F628F21D1D2 /* Pods */ = {
@@ -227,6 +276,7 @@
 			knownRegions = (
 				en,
 				Base,
+				sv,
 			);
 			mainGroup = 2558E03021C86C3F00338D28;
 			productRefGroup = 2558E03A21C86C3F00338D28 /* Products */;
@@ -244,9 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2558E04A21C86C4000338D28 /* LaunchScreen.storyboard in Resources */,
-				2558E09321E4EC1800338D28 /* GoogleService-Info.plist in Resources */,
-				2558E04721C86C4000338D28 /* Assets.xcassets in Resources */,
+				25DAB37E2211A8B300F35C74 /* Localizable.strings in Resources */,
+				259DD684220CC2A7006509C8 /* Assets.xcassets in Resources */,
 				2558E04221C86C3F00338D28 /* Main.storyboard in Resources */,
+				25DAB37B2211A8B300F35C74 /* InfoPlist.strings in Resources */,
+				25DAB38A2213625500F35C74 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +335,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GymBuddy/Pods-GymBuddy-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GymBuddy/Pods-GymBuddy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -298,7 +350,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymBuddy/Pods-GymBuddy-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GymBuddy/Pods-GymBuddy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -310,23 +362,34 @@
 			files = (
 				258190F62203E8EB008C47FC /* CameraController.swift in Sources */,
 				2513572421EA64B600A10F8F /* LoginViewController.swift in Sources */,
+				25DAB38C22136E3700F35C74 /* GradientView.swift in Sources */,
 				2558E05221C8937F00338D28 /* WorkoutTableViewController.swift in Sources */,
 				2558E06D21D9182E00338D28 /* WorkoutDetailMapCell.swift in Sources */,
+				259DD682220CB354006509C8 /* ImageClassifier.mlmodel in Sources */,
 				2558E06921D90A5400338D28 /* WorkoutDetailIconTextCell.swift in Sources */,
+				25D1A1C82210839400B6D069 /* WorkoutFactsTableTableViewController.swift in Sources */,
+				25D1A1D42210F73300B6D069 /* WOFactDetailIconTextCell.swift in Sources */,
 				25598E3221FCD47F0046340E /* EditWorkoutViewController.swift in Sources */,
 				2558E03F21C86C3F00338D28 /* ViewController.swift in Sources */,
 				2558E04521C86C3F00338D28 /* GymBuddy.xcdatamodeld in Sources */,
-				258190F92203EC20008C47FC /* Inceptionv3.mlmodel in Sources */,
 				2513572621EB93A600A10F8F /* WelcomeViewController.swift in Sources */,
+				25D1A1CA221088BB00B6D069 /* WorkoutFactsTableViewCell.swift in Sources */,
 				2558E06B21D9178F00338D28 /* WorkoutDetailSeperatorCell.swift in Sources */,
 				2558E05A21CAB29200338D28 /* RoundedTextField.swift in Sources */,
+				25D1A1D02210981800B6D069 /* WorkoutFactsDetailHeader.swift in Sources */,
+				259DD686220F415F006509C8 /* ButtonOne.swift in Sources */,
+				25DAB3862213203A00F35C74 /* EditWOTableViewController.swift in Sources */,
 				2558E05621CAAC0100338D28 /* DetailViewController.swift in Sources */,
+				259DD688220F450C006509C8 /* ButtonTwo.swift in Sources */,
 				2513572821EB995200A10F8F /* SignUpViewController.swift in Sources */,
 				2558E05C21CAB84E00338D28 /* Workout.swift in Sources */,
+				25D1A1D72211083200B6D069 /* WOTabBarController.swift in Sources */,
 				2558E05821CAB20E00338D28 /* NewWorkoutController.swift in Sources */,
 				2558E05421C896F100338D28 /* WorkoutTableViewCell.swift in Sources */,
 				2558E06721D9034900338D28 /* WorkoutDetailViewHeader.swift in Sources */,
 				2558E03D21C86C3F00338D28 /* AppDelegate.swift in Sources */,
+				25D1A1CC2210928A00B6D069 /* WorkoutFactsDetailViewController.swift in Sources */,
+				25D1A1D222109C3100B6D069 /* WorkoutFactsDetailTextCelll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +400,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2558E04121C86C3F00338D28 /* Base */,
+				25DAB3772211A16300F35C74 /* sv */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -345,8 +409,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				2558E04921C86C4000338D28 /* Base */,
+				25DAB3782211A16400F35C74 /* sv */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		25DAB3792211A8B300F35C74 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25DAB37A2211A8B300F35C74 /* sv */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		25DAB37C2211A8B300F35C74 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25DAB37D2211A8B300F35C74 /* sv */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -356,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -417,6 +499,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -473,6 +556,7 @@
 			baseConfigurationReference = 027C498F328D910DDC97EC2E /* Pods-GymBuddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JCGJ3H58C;
 				INFOPLIST_FILE = GymBuddy/Info.plist;
@@ -480,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shaondesign.GymBuddy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shaondesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -492,6 +576,7 @@
 			baseConfigurationReference = D1419A3D50AE583924CC21B7 /* Pods-GymBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JCGJ3H58C;
 				INFOPLIST_FILE = GymBuddy/Info.plist;
@@ -499,7 +584,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shaondesign.GymBuddy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shaondesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

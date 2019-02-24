@@ -5,7 +5,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="workoutDescription" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="workoutImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="workoutImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="Workout" positionX="-63" positionY="-18" width="128" height="120"/>

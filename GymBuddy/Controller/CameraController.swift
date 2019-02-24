@@ -16,8 +16,7 @@ class CameraController: UIViewController {
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     
-    var mlModel = Inceptionv3()
-    
+    var mlModel = ImageClassifier()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +26,10 @@ class CameraController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         // Start video capture.
         captureSession.startRunning()
+        
+        // Appearance of the navigation bar
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.64, blue:1.00, alpha:1.0)
+        navigationController?.navigationBar.tintColor = .white
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -71,7 +74,7 @@ class CameraController: UIViewController {
         view.layer.addSublayer(videoPreviewLayer!)
         
         // Bring the label to the front
-        descriptionLabel.text = "Looking for objects..."
+        descriptionLabel.text = NSLocalizedString("Looking for objects...", comment: "Looking for objects...")
         view.bringSubviewToFront(descriptionLabel)
     }
 }

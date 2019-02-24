@@ -9,10 +9,11 @@
 import UIKit
 import CoreData
 
-class WorkoutTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
+class WorkoutTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // Empty view outlet
+    // Empty view outlet, view to show when there is now items on the list
     @IBOutlet var emptyWorkoutView: UIView!
+    
     // Fetch from the store
     var fetchResultController: NSFetchedResultsController<WorkoutMO>!
     
@@ -30,8 +31,10 @@ class WorkoutTableViewController: UITableViewController, NSFetchedResultsControl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:1.00, blue:1.00, alpha:1.0)
+        // Appearance of the navigation bar
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.64, blue:1.00, alpha:1.0)
         navigationController?.navigationBar.tintColor = .white
+        tabBarController?.navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:1.00, blue:1.00, alpha:1.0)
 
         
         // Search
@@ -162,17 +165,12 @@ class WorkoutTableViewController: UITableViewController, NSFetchedResultsControl
         return cell
     }
     
-    // Delete a item from the list
+    // MARK: - Right Swipe
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-       
-        // Create a text field to store the users input
-        var muscleWorkoutTextField = UITextField()
-        var workoutDescriptionTextField = UITextField()
-        var workoutLocationTextField = UITextField()
+        let deleteTitle = NSLocalizedString("Delete", comment: "Delete")
         
-        
-        // Delete an item from the list by swiping
-        let deleteSwipe = UIContextualAction(style: .destructive, title: "Delete") {
+        // Add swipe to edit to delete the items
+        let deleteSwipe = UIContextualAction(style: .destructive, title: deleteTitle) {
             (action, sourceView, completionHandler) in
             if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
                 let context = appDelegate.persistentContainer.viewContext
@@ -182,66 +180,49 @@ class WorkoutTableViewController: UITableViewController, NSFetchedResultsControl
             }
             completionHandler(true)
         }
-        
-        // Add a swipe to edit button
-        let editSwipe = UIContextualAction(style: .normal, title: "Edit your workout") {
-            (action, sourceView, completionHandler) in
-            
-            // Create an alert controller
-            let alert = UIAlertController(title: "Edit your workout", message: "", preferredStyle: .alert)
-            // Create an action for the alert controller
-            let editAction = UIAlertAction(title: "Edit Item", style: .default) { (action) in
-    
-                // Check to see if the fields are empty before we save it to our data model
-                
-                if muscleWorkoutTextField.text == "" {
-                    return
-                } else {
-                    self.workouts[indexPath.row].setValue(muscleWorkoutTextField.text, forKey: "muscleWorkout")
-                }
-                
-                if workoutDescriptionTextField.text == "" {
-                    return
-                } else {
-                    self.workouts[indexPath.row].setValue(workoutDescriptionTextField.text, forKey: "workoutDescription")
-                }
-                
-                if workoutLocationTextField.text == "" {
-                    return
-                } else {
-                self.workouts[indexPath.row].setValue(workoutLocationTextField.text, forKey: "place")
-                }
-            }
-            
-            // Add textfields to the alert
-            alert.addTextField { (textField1) in
-                textField1.placeholder = "Edit muscle group"
-                muscleWorkoutTextField = textField1
-            }
-            alert.addTextField { (textField2) in
-                textField2.placeholder = "Edit workout description"
-                workoutDescriptionTextField = textField2
-            }
-            alert.addTextField { (textField3) in
-                textField3.placeholder = "Edit workout location"
-                workoutLocationTextField = textField3
-            }
-            
-            
-            // Add the action to the alert controller
-            alert.addAction(editAction)
-            // Present it to the user
-            self.present(alert, animated: true, completion: nil)
-
-            completionHandler(true)
-            
-        }
-        
-        
-        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteSwipe, editSwipe])
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteSwipe])
         
         return swipeConfiguration
     }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let shareAction = UIContextualAction(style: .normal, title: "Share") {
+            (action, sourceView, completionHandler) in
+            
+            // image to share
+            let muscleType = self.workouts[indexPath.row].muscleWorkout
+            let workoutDescription = self.workouts[indexPath.row].workoutDescription
+            let workoutLocation = self.workouts[indexPath.row].place
+            
+            // set up activity view controller
+            var yourArray = [Any]()
+            yourArray.append(muscleType!)
+            yourArray.append(workoutDescription!)
+            yourArray.append(workoutLocation!)
+            yourArray.append(self.workouts[indexPath.row].workoutImage!)
+            let activityViewController = UIActivityViewController(activityItems: yourArray, applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+            
+            
+            // exclude some activity types from the list (optional)
+            activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+            // present the view controller
+            self.present(activityViewController, animated: true, completion: nil)
+            
+            completionHandler(true)
+        }
+        
+        shareAction.backgroundColor = UIColor(red:0.00, green:0.70, blue:1.00, alpha:1.0)
+    
+        let shareSwipe = UISwipeActionsConfiguration(actions: [shareAction])
+        
+        return shareSwipe
+    }
+    
+    
+    
+    
 
     
    
@@ -277,3 +258,67 @@ class WorkoutTableViewController: UITableViewController, NSFetchedResultsControl
 
 
 }
+
+
+// MARK: - Add a swipe to edit button to edit text fields
+
+//        let title = NSLocalizedString("Edit your workout", comment: "Edit workout")
+//        let message = NSLocalizedString("", comment: "message")
+//        let itemTitle = NSLocalizedString("Edit item", comment: "Edit item")
+//        let editSwipe = UIContextualAction(style: .normal, title: title) {
+//            (action, sourceView, completionHandler) in
+
+// Create an alert controller
+//            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+// Create an action for the alert controller
+//            let editAction = UIAlertAction(title: itemTitle, style: .default) { (action) in
+//
+//                // Check to see if the fields are empty before we save it to our data model
+//
+//                if muscleWorkoutTextField.text == "" {
+//                    return
+//                } else {
+//                    self.workouts[indexPath.row].setValue(muscleWorkoutTextField.text, forKey: "muscleWorkout")
+//                }
+//
+//                if workoutDescriptionTextField.text == "" {
+//                    return
+//                } else {
+//                    self.workouts[indexPath.row].setValue(workoutDescriptionTextField.text, forKey: "workoutDescription")
+//                }
+//
+//                if workoutLocationTextField.text == "" {
+//                    return
+//                } else {
+//                self.workouts[indexPath.row].setValue(workoutLocationTextField.text, forKey: "place")
+//                }
+//            }
+
+
+
+//            let placeHolder1 = NSLocalizedString("Edit muscle group", comment: "Edit muscle group")
+//            let placeHolder2 = NSLocalizedString("Edit workout description", comment: "Edit workout description")
+//            let placeHolder3 = NSLocalizedString("Edit workout location", comment: "Edit workout location")
+//
+//            // MARK: - Add textfields to the alert
+//            alert.addTextField { (textField1) in
+//                textField1.placeholder = placeHolder1
+//                muscleWorkoutTextField = textField1
+//            }
+//            alert.addTextField { (textField2) in
+//                textField2.placeholder = placeHolder2
+//                workoutDescriptionTextField = textField2
+//            }
+//            alert.addTextField { (textField3) in
+//                textField3.placeholder = placeHolder3
+//                workoutLocationTextField = textField3
+//            }
+//
+//            // Add the actions to the alert controller
+////            alert.addAction(editAction)
+//            // Present it to the user
+//            self.present(alert, animated: true, completion: nil)
+//
+//            completionHandler(true)
+//
+//        }

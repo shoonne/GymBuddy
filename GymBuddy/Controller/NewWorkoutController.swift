@@ -14,10 +14,8 @@ class NewWorkoutController: UITableViewController, UITextFieldDelegate, UIImageP
     // Get access to the context in the persistent container and cast as AppDelegate
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    // Add image to your workout
+    // OUTLETS
     @IBOutlet var workoutImageView: UIImageView!
-    
-    
     @IBOutlet var workoutTextField: RoundedTextField! {
         didSet{
             workoutTextField.tag = 1
@@ -47,7 +45,7 @@ class NewWorkoutController: UITableViewController, UITextFieldDelegate, UIImageP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:1.00, blue:1.00, alpha:1.0)
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.64, blue:1.00, alpha:1.0)
         navigationController?.navigationBar.tintColor = .white
     }
 
@@ -62,10 +60,12 @@ class NewWorkoutController: UITableViewController, UITextFieldDelegate, UIImageP
     
     // Image picker
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let photoMessage = NSLocalizedString("Choose your photo source", comment: "Choose your photo source")
+        let cameraTitle = NSLocalizedString("Camera", comment: "")
         if indexPath.row == 0 {
-            let photoSourceRequestController = UIAlertController(title: "", message:"Choose your photo source" , preferredStyle: .actionSheet)
+            let photoSourceRequestController = UIAlertController(title: "", message:photoMessage , preferredStyle: .actionSheet)
             
-            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: {
+            let cameraAction = UIAlertAction(title: cameraTitle, style: .default, handler: {
                 (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePicker = UIImagePickerController()
@@ -78,7 +78,8 @@ class NewWorkoutController: UITableViewController, UITextFieldDelegate, UIImageP
             })
             
             // Alert action with photo library and camera options
-            let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: {
+            let photoLibrary = NSLocalizedString("Photo library", comment: "Photo library")
+            let photoLibraryAction = UIAlertAction(title: photoLibrary, style: .default, handler: {
                 (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePicker = UIImagePickerController()
@@ -132,11 +133,12 @@ class NewWorkoutController: UITableViewController, UITextFieldDelegate, UIImageP
     
     // User pressed the save button
     @IBAction func saveButtonTapped(sender: AnyObject) {
-        
+        let alertTitle = NSLocalizedString("Oops", comment: "Oops")
+        let alertMessage = NSLocalizedString("We can't proceed because one of the fields is blank. Please note that all fields are required.", comment: "alertMessage")
         // If the fields are empty, show a warning
         if workoutTextField.text == ""{
             
-            let alertController = UIAlertController(title: "Oops", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
             
             let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(alertAction)
@@ -162,6 +164,10 @@ class NewWorkoutController: UITableViewController, UITextFieldDelegate, UIImageP
         saveItems()
         
         // Dissmiss the view
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func unwindToNewWorkout(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
     }
     

@@ -18,17 +18,23 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Sign Up"
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.00, green:0.64, blue:1.00, alpha:1.0)
+        navigationController?.navigationBar.tintColor = .white
+        
+        self.title =  NSLocalizedString("Sign Up", comment: "Sign Up")
         nameTextField.becomeFirstResponder()
     }
     
     
     @IBAction func registerAccount(sender: UIButton) {
         // Validate the input
+        
+        let alertTitle = NSLocalizedString("Registraion error", comment: "Registration error")
+        let alertMessage = NSLocalizedString("Please make sure you provide your name, email adress and password to complete the registration", comment: "Alert Message ")
         guard let name  = nameTextField.text, name != "",
         let emailAdress = emailTextField.text, emailAdress != "",
             let password = passwordTextField.text, password != "" else {
-                let alertController = UIAlertController(title: "Registration Error", message: "Please make sure you provide your name, email adress and password to complete the registration", preferredStyle: .alert)
+                let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 
                 alertController.addAction(okayAction)
@@ -40,7 +46,7 @@ class SignUpViewController: UIViewController {
         // Register the user account on Firebase
         Auth.auth().createUser(withEmail: emailAdress, password: password, completion: {(user, error) in
             if let error = error {
-                let alertController = UIAlertController(title: "Registration Error", message: error.localizedDescription, preferredStyle: .alert)
+                let alertController = UIAlertController(title: alertTitle, message: error.localizedDescription, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(okayAction)
                 self.present(alertController, animated: true, completion: nil)

@@ -13,37 +13,31 @@ class EditWorkoutViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var workoutArray = [WorkoutMO]()
 
+    weak var workout : WorkoutMO!
     
-    @IBOutlet weak var muscleTextField: UITextField!
-    @IBOutlet var descriptionTextField: UITextField!
-    @IBOutlet var locationTextField: UITextField!
+    @IBOutlet var textField1 : UITextField!
+    @IBOutlet var textField2 : UITextField!
+    @IBOutlet var textField3 : UITextField!
+    @IBOutlet var imageView  : UIImageView!
 
 
-    var workout : WorkoutMO!
-    var managedObjectContext : NSManagedObjectContext!
-    var entry : NSManagedObject!
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadItems()
-        muscleTextField.text = workoutArray[0].muscleWorkout
         
+        textField1.text = workout.muscleWorkout
+        textField2.text = workout.workoutDescription
+        textField2.text = workout.place
+        
+        if let workoutImage = workout.workoutImage {
+            imageView.image = UIImage(data: workoutImage as Data)
+            
+        }
         
         // Do any additional setup after loading the view.
     }
     
-    func loadItems(){
-        // Create a new constant and specify it as a NSFetchRequest
-        // And make it fetch data in form of Item. You have to specify the type
-        let request : NSFetchRequest<WorkoutMO> = WorkoutMO.fetchRequest()
-        
-        do{
-            workoutArray = try context.fetch(request)
-        } catch {
-            print("Error fetching data from context \(error)")
-        }
-    }
+    
     
 
     /*
